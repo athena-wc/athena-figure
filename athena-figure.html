@@ -1,0 +1,86 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+An element providing a solution to no problem in particular.
+
+Example:
+
+    <athena-figure height="auto" width="100%" source="images/rey.png" caption="Rey from Starwars"></athena-figure>
+
+@group Seed Elements
+@element athena-figure
+@demo demo/index.html
+@hero hero.svg
+-->
+<dom-module id="athena-figure">
+
+  <template>
+    <style>
+      :host {
+        display: block;
+        box-sizing: border-box;
+      }
+
+      figure {
+        border: 1px solid grey;
+      }
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+
+      figcaption {
+        width: max-content;
+      }
+
+    </style>
+    <figure>
+<!--      <img src="{{source}}" height="{{height}}" width="{{width}}">-->
+      <img src="{{source}}">
+      <figcaption><span>{{caption}}</span></figcaption>
+    </figure>
+  </template>
+
+</dom-module>
+
+<script>
+
+  Polymer({
+
+    is: 'athena-figure',
+
+    properties: {
+//      height: {
+//        type: Number,
+//        value: ""
+//      },
+//
+//      width: {
+//        type: Number,
+//        value: ""
+//      },
+
+      src: {
+        type: String,
+        value: ""
+      },
+
+      caption: {
+        type: String,
+        value: ""
+      }
+
+    }
+  });
+
+</script>
