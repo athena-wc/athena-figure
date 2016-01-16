@@ -10,13 +10,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../polymer/polymer.html">
 
 <!--
-An element providing a solution to no problem in particular.
+An element providing a captioned figure with optional width and height. 
+
+If you don't enter height it's set to auto
+
+If you don't enter width it's set to 100%
 
 Example:
 
     <athena-figure height="auto" width="100%" source="images/rey.png" caption="Rey from Starwars"></athena-figure>
 
-@group Seed Elements
 @element athena-figure
 @demo demo/index.html
 @hero hero.svg
@@ -60,16 +63,6 @@ Example:
     is: 'athena-figure',
 
     properties: {
-//      height: {
-//        type: Number,
-//        value: ""
-//      },
-//
-//      width: {
-//        type: Number,
-//        value: ""
-//      },
-
       src: {
         type: String,
         value: ""
